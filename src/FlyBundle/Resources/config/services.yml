@@ -1,0 +1,4 @@
+services:
+#    fly.example:
+#        class: FlyBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

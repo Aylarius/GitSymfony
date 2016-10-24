@@ -1,0 +1,12 @@
+terrain_index:
+    path:     /
+    defaults: { _controller: "FlyBundle:Terrain:index" }
+    methods:  GET
+
+terrain_show:
+    path:     /{id}/show
+    defaults: { _controller: "FlyBundle:Terrain:show" }
+    methods:  GET
+
+
+

@@ -1,0 +1,25 @@
+FlyBundle\Entity\Flight:
+    type: entity
+    table: null
+    repositoryClass: FlyBundle\Repository\FlightRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        departure:
+            type: string
+            length: '4'
+        arrival:
+            type: string
+            length: '4'
+        pilot:
+            type: string
+            length: 255
+        freeSeats:
+            type: integer
+        takeofTime:
+            type: datetime
+    lifecycleCallbacks: {  }

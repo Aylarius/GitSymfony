@@ -1,0 +1,15 @@
+fly_flight:
+    resource: "@FlyBundle/Resources/config/routing/flight.yml"
+    prefix:   /flight
+
+fly_homepage:
+    path:     /
+    defaults: { _controller: FlyBundle:Default:index }
+
+fly_reservation:
+    resource: "@FlyBundle/Resources/config/routing/reservation.yml"
+    prefix:   /reservation
+
+fly_terrain:
+    resource: "@FlyBundle/Resources/config/routing/terrain.yml"
+    prefix:   /terrain
