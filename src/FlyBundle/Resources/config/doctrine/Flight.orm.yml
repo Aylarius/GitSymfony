@@ -9,12 +9,6 @@ FlyBundle\Entity\Flight:
             generator:
                 strategy: AUTO
     fields:
-        departure:
-            type: string
-            length: '4'
-        arrival:
-            type: string
-            length: '4'
         pilot:
             type: string
             length: 255
@@ -23,3 +17,18 @@ FlyBundle\Entity\Flight:
         takeofTime:
             type: datetime
     lifecycleCallbacks: {  }
+
+    manyToOne:
+        departure:
+            targetEntity: FlyBundle\Entity\Terrain
+            inversedBy: departures
+        arrival:
+            targetEntity: FlyBundle\Entity\Terrain
+            inversedBy: arrivals
+        plane:
+            targetEntity: FlyBundle\Entity\PlaneModel
+            inversedBy: model
+    oneToMany:
+        flights:
+            targetEntity: FlyBundle\Entity\Reservation
+            mappedBy: flight

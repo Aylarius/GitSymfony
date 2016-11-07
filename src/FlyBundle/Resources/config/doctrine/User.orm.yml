@@ -1,0 +1,20 @@
+# src/FlyBundle/Resources/config/doctrine/User.orm.yml
+
+FlyBundle\Entity\User:
+    type: entity
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
+
+    manyToMany:
+        reservations:
+            targetEntity: FlyBundle\Entity\Reservation
+            inversedBy: passengers

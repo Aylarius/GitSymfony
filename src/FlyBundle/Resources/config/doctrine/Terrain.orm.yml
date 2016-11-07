@@ -26,3 +26,11 @@ FlyBundle\Entity\Terrain:
             type: string
             length: 255
     lifecycleCallbacks: {  }
+
+    oneToMany:
+        departures:
+          targetEntity: FlyBundle\Entity\Flight
+          mappedBy: departure
+        arrivals:
+          targetEntity: FlyBundle\Entity\Flight
+          mappedBy: arrival

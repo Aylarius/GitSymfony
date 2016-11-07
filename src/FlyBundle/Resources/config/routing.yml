@@ -13,3 +13,7 @@ fly_reservation:
 fly_terrain:
     resource: "@FlyBundle/Resources/config/routing/terrain.yml"
     prefix:   /terrain
+
+fly_planemodel:
+    resource: "@FlyBundle/Resources/config/routing/planemodel.yml"
+    prefix:   /planemodel

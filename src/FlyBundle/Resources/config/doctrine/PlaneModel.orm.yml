@@ -1,0 +1,28 @@
+FlyBundle\Entity\PlaneModel:
+    type: entity
+    table: null
+    repositoryClass: FlyBundle\Repository\PlaneModelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        manufacturer:
+            type: string
+            length: 255
+        cruiseSpeed:
+            type: integer
+        nbSeats:
+            type: integer
+        status:
+            type: string
+            length: 255
+            column: Status
+    lifecycleCallbacks: {  }
+
+    oneToMany:
+        model:
+          targetEntity: FlyBundle\Entity\Flight
+          mappedBy: plane

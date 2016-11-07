@@ -1,0 +1,24 @@
+planemodel_index:
+    path:     /
+    defaults: { _controller: "FlyBundle:PlaneModel:index" }
+    methods:  GET
+
+planemodel_show:
+    path:     /{id}/show
+    defaults: { _controller: "FlyBundle:PlaneModel:show" }
+    methods:  GET
+
+planemodel_new:
+    path:     /new
+    defaults: { _controller: "FlyBundle:PlaneModel:new" }
+    methods:  [GET, POST]
+
+planemodel_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "FlyBundle:PlaneModel:edit" }
+    methods:  [GET, POST]
+
+planemodel_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "FlyBundle:PlaneModel:delete" }
+    methods:  DELETE

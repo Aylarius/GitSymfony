@@ -15,3 +15,12 @@ FlyBundle\Entity\Reservation:
         nbSeats:
             type: integer
     lifecycleCallbacks: {  }
+
+    manyToMany:
+        passengers:
+            targetEntity: FlyBundle\Entity\User
+            mappedBy: reservation
+    manyToOne:
+        flight:
+            targetEntity: FlyBundle\Entity\Flight
+            inversedBy: flights
