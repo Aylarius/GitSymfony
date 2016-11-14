@@ -7,3 +7,44 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    app.admin.terrain:
+        class: FlyBundle\Admin\TerrainAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Editer l'entité Terrain", label: "Terrain" }
+        arguments:
+            - ~
+            - FlyBundle\Entity\Terrain
+            - ~
+    app.admin.flight:
+        class: FlyBundle\Admin\FlightAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Editer l'entité Flight", label: "Flight" }
+        arguments:
+            - ~
+            - FlyBundle\Entity\Flight
+            - ~
+    app.admin.planemodel:
+        class: FlyBundle\Admin\PlaneModelAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Editer l'entité PlaneModel", label: "PlaneModel" }
+        arguments:
+            - ~
+            - FlyBundle\Entity\PlaneModel
+            - ~
+    app.admin.reservation:
+        class: FlyBundle\Admin\ReservationAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Editer l'entité Reservation", label: "Reservation" }
+        arguments:
+            - ~
+            - FlyBundle\Entity\Reservation
+            - ~
+    app.admin.user:
+        class: FlyBundle\Admin\UserAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Editer l'entité User", label: "User" }
+        arguments:
+            - ~
+            - FlyBundle\Entity\User
+            - ~
